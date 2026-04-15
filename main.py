@@ -63,6 +63,7 @@
 #     url = db.query(URL).filter(URL.short_code == short_code).first()
 
 #     if not url:
+
 #         raise HTTPException(status_code=404, detail="Not found")
 
 #     return {
@@ -70,7 +71,7 @@
 #         "click_count": url.click_count
 #     }
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException 
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 from database import SessionLocal, engine, Base
