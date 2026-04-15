@@ -133,6 +133,6 @@ BASE_URL=https://your-domain.com
 
 ## 👨‍💻 Author
 
-Punith Kumar
+Punith
 
 ---
