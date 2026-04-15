@@ -7,6 +7,10 @@ from base62 import encode
 import validators
 import redis
 
+import os
+BASE_URL = os.getenv("BASE_URL", "http://localhost:8000")
+
+
 # Create tables
 Base.metadata.create_all(bind=engine)
 
@@ -54,7 +58,7 @@ def shorten_url(request: dict):
     new_url.short_code = short_code
     db.commit()
 
-    return {"short_url": f"http://localhost:8000/{short_code}"}
+    return {"short_url": f"{BASE_URL}/{short_code}"}
 
 
 # -----------------------------
