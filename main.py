@@ -62,7 +62,7 @@ def shorten_url(request: dict):
 
 
 # -----------------------------
-# 🔁 REDIRECT API
+#  REDIRECT API
 # -----------------------------
 
 @app.get("/{short_code}")
